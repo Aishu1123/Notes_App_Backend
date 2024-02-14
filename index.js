@@ -12,8 +12,8 @@ app.use(cors());
 app.use("/users" , userRouter)
 app.use("/notes" , noteRouter)
 
-app.get("/",()=>{
-  console.log({msg:"Home Page"})
+app.get("/",(req,res)=>{
+  res.send({msg:"Home Page"})
 })
 
 app.listen(process.env.port, async () => {
