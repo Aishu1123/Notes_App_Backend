@@ -13,10 +13,10 @@ app.use("/users" , userRouter)
 app.use("/notes" , noteRouter)
 
 
-app.listen(process.env.PORT, async () => {
+app.listen(process.env.port, async () => {
   try {
     await connection;
-    console.log(`server is running at http://localhost:${process.env.PORT}`);
+    console.log(`server is running at http://localhost:${process.env.port}`);
     console.log("NodeApp database is connected.");
   } catch (err) {
    console.log(err)
